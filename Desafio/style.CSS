@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+#nova-tarefa {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+}
+#adicionar {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 5px solid #2196F3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li.concluida {
+  text-decoration: line-through;
+  color: gray;
+  border-left-color: #4CAF50;
+}
+button.concluir {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
