@@ -34,3 +34,13 @@ function atualizarLista() {
         lista.appendChild(row);
     });
 }
+const slides = document.querySelectorAll(".slideshow img");
+let currentSlide = 0;
+
+function trocarSlide() {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+
+setInterval(trocarSlide, 5000); // troca a cada 5 segundos

@@ -6,45 +6,40 @@ class Aluno {
     public nota: number
   ) {}
 
-  // Método para verificar aprovação
-
   verificarAprovacao(): string {
     return this.nota >= 7 ? "Aprovado" : "Reprovado";
   }
 }
+
 // Array para armazenar os alunos
 const alunos: Aluno[] = [];
 
 const form = document.getElementById("formAluno") as HTMLFormElement;
 const lista = document.getElementById("listaAlunos") as HTMLTableSectionElement;
 
-// Evento de submissão do formulário
-
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
 
-// Obtém os valores dos campos do formulário
+  const nomeInput = document.getElementById("nome") as HTMLInputElement;
+  const idadeInput = document.getElementById("idade") as HTMLInputElement;
+  const notaInput = document.getElementById("nota") as HTMLInputElement;
 
-  const nome = (document.getElementById("nome") as HTMLInputElement).value.trim();
-  const idade = parseInt((document.getElementById("idade") as HTMLInputElement).value);
-  const nota = parseFloat((document.getElementById("nota") as HTMLInputElement).value);
-
-// Validação simples dos campos
+  const nome = nomeInput.value.trim();
+  const idade = parseInt(idadeInput.value);
+  const nota = parseFloat(notaInput.value);
 
   if (!nome || isNaN(idade) || isNaN(nota) || nota < 0 || nota > 10) {
     alert("Preencha todos os campos corretamente.");
     return;
   }
-// Cria um novo aluno e atualiza a lista
 
   const aluno = new Aluno(nome, idade, nota);
   alunos.push(aluno);
   atualizarLista();
   form.reset();
 });
-// Função para atualizar a lista de alunos na tabela
 
-function atualizarLista() {
+function atualizarLista(): void {
   lista.innerHTML = "";
   alunos.forEach((aluno) => {
     const row = document.createElement("tr");
@@ -57,3 +52,4 @@ function atualizarLista() {
     lista.appendChild(row);
   });
 }
+

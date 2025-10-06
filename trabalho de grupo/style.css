@@ -1,65 +1,85 @@
+/* Estiliza o corpo da página */
 body {
-    \\estiliza o corpo da página
-  background-image: https://ts3.mm.bing.net/th?id=OIP.GfWzeKMsMhEE5U66QUuZiAHaEJ&pid=15.1;
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  background: #f0f4f8;
-  margin: 0;
-  padding: 
+  align-items: center;
 }
 
-body {
-  background-image: url('https://png.pngtree.com/background/20231030/original/pngtree-3d-render-of-a-well-lit-classroom-with-a-chalkboard-picture-image_5803412.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin: 0;
-  padding: 20px;
+/* Slide de fundo */
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
+
+.slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
 /* Container centralizado e com sombra */
-
 .container {
-  
+  max-width: 600px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
 }
 
-\\Estiliza o título principal 
+/* Formulário */
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-\\Estiliza os campos de entrada e o botão
-input, button {
+
+/* Campos de entrada e botão */
+input,
+button {
   padding: 10px;
   font-size: 16px;
 }
-    \\Estiliza o botão
+
+/* Botão */
 button {
   background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
 }
-    \\Estiliza o botão ao passar o mouse sobre ele
+
 button:hover {
   background-color: #0056b3;
 }
-\\Estiliza a tabela
+
+/* Tabela */
 table {
   width: 100%;
   margin-top: 20px;
   border-collapse: collapse;
 }
-\\Estiliza as células da tabela
-th, td {
+
+th,
+td {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   text-align: left;
