@@ -1,0 +1,66 @@
+body {
+    \\estiliza o corpo da página
+  background-image: https://ts3.mm.bing.net/th?id=OIP.GfWzeKMsMhEE5U66QUuZiAHaEJ&pid=15.1;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 
+}
+
+body {
+  background-image: url('https://png.pngtree.com/background/20231030/original/pngtree-3d-render-of-a-well-lit-classroom-with-a-chalkboard-picture-image_5803412.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 20px;
+}
+/* Container centralizado e com sombra */
+
+.container {
+  
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+\\Estiliza o título principal 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+\\Estiliza os campos de entrada e o botão
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+    \\Estiliza o botão
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+    \\Estiliza o botão ao passar o mouse sobre ele
+button:hover {
+  background-color: #0056b3;
+}
+\\Estiliza a tabela
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+\\Estiliza as células da tabela
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
